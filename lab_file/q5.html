@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Image Map</title>
+  <style>
+    .info-window {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      font-family: cursive;
+      transform: translateY(-50%);
+      background-color: white;
+      border: 2px solid black;
+      padding: 10px;
+      max-width: 250px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <h1>Interactive Solar System</h1>
+    <img src="./images/SolarSystem.jpg" alt="Solar System" usemap="#solar-map">
+    <div class="info-window" id="info"></div>
+  <map name="solar-map">
+      <area  alt="Sun" title="Sun" href="#" coords="574,360,75" shape="circle" onclick="showInfo('Sun', 'The star at the center of our solar system.')">
+      <area  alt="Mercury" title="Mercury" href="#" coords="706,295,31" shape="circle" onclick="showInfo('Mercury', 'The closest planet to the Sun and the smallest in our solar system.')">
+      <area  alt="Venus" title="Venus" href="#" coords="774,409,59" shape="circle" onclick="showInfo('Venus', 'The hottest planet in our solar system, even hotter than Mercury.')">
+      <area  alt="Earth" title="Earth" href="#" coords="420,488,83" shape="circle" onclick="showInfo('Earth', 'The only planet known to support life.')">
+      <area  alt="Mars" title="Mars" href="#" coords="246,247,70" shape="circle" onclick="showInfo('Mars', 'The red planet with potential for future human exploration.')">
+      
+      <area  alt="Jupyter" title="Jupyter" href="#" coords="853,593,91" shape="circle" onclick="showInfo('Jupiter', 'The largest planet in our solar system, known for its Great Red Spot.')">
+      <area  alt="Saturn" title="Saturn" href="#" coords="969,284,69" shape="circle" onclick="showInfo('Saturn', 'The planet with the most prominent rings made of ice and dust.')">
+      <area  alt="Uranus" title="Uranus" href="#" coords="178,638,51" shape="circle" onclick="showInfo('Uranus', 'An ice giant known for its tilted axis and blue color.')">
+      <area alt="Neptune" title="Neptune" href="#" coords="465,118,42" shape="circle" onclick="showInfo('Neptune', 'The farthest gas giant, with strong winds and a dark blue color.')">
+  </map>
+  <div id="info"></div>
+  <script>
+    function showInfo(planet, info) {
+      document.getElementById("info").innerHTML = "<h4>" +"<span><u>" +planet + "</u><span>" + "</h4><p>" + info + "</p>";
+      document.getElementById("info").style.display = "block";
+    }
+  </script>
+</body>
+</html>
