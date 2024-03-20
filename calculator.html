@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div id="Calculator">
+    <input id="display" readonly>
+    <div id="keys">
+    <button onclick="addtodisplay('+')" class="inb butt">+</button>
+    <button onclick="addtodisplay('1')" class="inb">1</button>
+    <button onclick="addtodisplay('2')" class="inb">2</button>
+    <button onclick="addtodisplay('3')" class="inb">3</button>
+    <button onclick="addtodisplay('-')" class="inb butt">-</button>
+    <button onclick="addtodisplay('4')" class="inb">4</button>
+    <button onclick="addtodisplay('5')" class="inb">5</button>
+    <button onclick="addtodisplay('6')" class="inb">6</button>
+    <button onclick="addtodisplay('*')" class="inb butt">*</button>
+    <button onclick="addtodisplay('7')" class="inb">7</button>
+    <button onclick="addtodisplay('8')" class="inb">8</button>
+    <button onclick="addtodisplay('9')" class="inb">9</button>
+    <button onclick="addtodisplay('/')" class="inb butt">/</button>
+    <button onclick="addtodisplay('%')" class="inb butt">%</button>
+    <button onclick="addtodisplay('0')" class="inb">0</button>
+    <button onclick="addtodisplay('.')" class="inb ">.</button>
+    <button onclick="clearscreen()" class="inb butt">C</button>
+    <button onclick="deletel()" class="inb butt">D</button>
+    <button onclick="calc()" class="inb">=</button>
+</div>
+</div>
+</body>
+<script src="calc.js"></script>
+</html>

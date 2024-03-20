@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <header><b>TIME TABLE</b></header><br>
+    <table>
+        <tr>
+            <td><b>Day/period</b></td>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+            <td >break</td>
+            <td>IV</td>
+            <td>V</td>
+            <td>VI</td>
+            <td>VII</td>
+
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+            <td id="vertical-txt" rowspan="6">LUNCH</td>
+            <td colspan="3">V</td>
+            <td>VI</td>
+
+
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td colspan="3">I</td>
+            <td>II</td>
+            <td>III</td>
+            <td>IV</td>
+            <td>V</td>
+
+
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+            <td>IV</td>
+            <td colspan="3">V</td>
+
+
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+            <td colspan="3">IV</td>
+            <td>V</td>
+
+
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td colspan="3">I</td>
+            <td>II</td>
+            <td>III</td>
+            <td>IV</td>
+            <td>V</td>
+
+
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>I</td>
+            <td>II</td>
+            <td>III</td>
+            <td colspan="3">IV</td>
+            <td>V</td>
+
+
+        </tr>
+    </table>
+</body>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    table{
+    
+        /* height: 200px; */
+        position: relative;
+        left: 15%;
+        border: 5px solid black;
+        border-collapse: collapse;
+        width: 500px;
+        text-align: center;
+    }
+
+    tr,td{
+        padding: 10px 20px;
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    #vertical-txt{
+        writing-mode: vertical-rl;
+        /* transform: rotate(190deg); */
+        text-orientation: upright;
+        /* white-space: nowrap; */
+    }
+</style>
+</html>
