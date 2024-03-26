@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="data">
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+    <div id="text"></div>
+</body>
+<script>
+    let a=document.getElementsByClassName('data')[0];
+    var arr=[];
+    var i=0;
+    function display()
+    {
+        document.getElementById('text').innerText=arr;
+    }
+    function add()
+    {
+        let s=a.value;
+        a.value="";
+        if(s!="")
+        arr[i++]=s;
+        display();
+    }
+    function remove()
+    {
+        arr.splice(-1,1);
+        i--;
+        display();
+    }
+
+</script>
+</html>

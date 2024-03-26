@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cont">
+        <p>Get In Touch</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="8117a3fd-538b-42a4-bf33-843b5ed09fc3">
+            <div class="fcont">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea name="query" id="texta" cols="60" rows="5" required>Enter your Query </textarea>
+            <button type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    <a href="index.html"><img src="icons8-home-50.png" class="home" alt=""></a>
+</body>
+<script>
+    var a=document.getElementById('texta');
+    a.addEventListener('focus',function(){
+        this.innerHTML='';
+    })
+</script>
+</html>

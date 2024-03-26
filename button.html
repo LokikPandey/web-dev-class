@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="c1">hello</p>
+    <button onclick="fun1()">show</button>
+    <button onclick="fun2()">hide</button>
+</body>
+<script>
+    const a=document.getElementsByClassName('c1')[0];
+    s=a.innerText;
+    function fun1()
+    {
+        a.innerText="";
+    }
+    function fun2()
+    {
+        a.innerText=s;
+    }
+</script>
+</html>
