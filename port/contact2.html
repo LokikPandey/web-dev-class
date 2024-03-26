@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <p>Get In Touch</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+    
+                <input type="hidden" name="access_key" value="8117a3fd-538b-42a4-bf33-843b5ed09fc3">
+                <div class="fcont">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea name="query" id="texta" cols="50" rows="5" required>Enter your Query </textarea>
+                <button type="submit">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+</body>
+<script>
+    var a=document.getElementById('texta');
+    // console.log(a);
+    a.addEventListener('click',function(){
+        this.innerHTML="";
+    });
+
+
+</script>
+</html>

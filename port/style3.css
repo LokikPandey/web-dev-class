@@ -1,0 +1,120 @@
+*{
+    padding: 0;margin: 0;
+}
+.container
+{
+    display: flex;
+
+    >.left
+    {
+        /* background-color: red; */
+        /* border-radius: 0 100px 100px 0; */
+        width: 40%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: skyblue; */
+        p{
+            font-size: 50px;
+            border-bottom: solid 2px red;
+        }
+        >form{
+
+            >.fcont{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                >input
+                {
+                    padding: 10px;
+                    margin: 20px;
+                    border-radius: 20px;
+                    border: none;
+                    color: white;
+                    width: 80%;
+                    background-color: rgb(154, 152, 152);
+                }
+                >textarea
+                {
+                    /* font-family: ; */
+                    margin:20px;
+                    border: none;
+                    border-radius: 20px;
+                    padding: 20px;
+                    color: rgb(207, 207, 207);
+                    background-color: rgb(154,152,152);
+                }
+                >button
+                {
+                    width: 100px;
+                    background-color: hsl(39, 100%, 50%);
+                    border: none;
+                    border-radius: 20px;
+                    height: 30px;
+                    cursor: pointer;
+                    &:hover
+                    {
+                        background-color:hsl(39, 100%, 60%) ;
+                    }
+                }
+            }
+        }
+    }
+
+    >.right
+    {
+        background-image: url('top-view-chat-bubbles-with-telephone-receiver-copy-space.jpg');
+        background-size: 1000px;
+        width: 60%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container
+    {
+        /* content: ""; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('top-view-chat-bubbles-with-telephone-receiver-copy-space.jpg');
+        background-size: cover;
+
+    }
+
+    .left{
+        width: 100vw;
+        width: fit-content;
+    }
+    .right{
+        display: none;
+    }
+    .fcont{
+        background-color: whitesmoke;
+        /* padding: 30px; */
+        margin: 30px;
+        border-radius: 30px;
+        padding: 20px;
+    }
+    
+}
+@media screen and (max-width:600px) {
+
+    .fcont{
+        background-color: whitesmoke;
+        /* padding: 30px; */
+        margin: 30px;
+        border-radius: 30px;
+        padding: 20px;
+        width: 300px;
+
+        >textarea
+        {
+            width: 250px;
+        }
+    }
+    
+}
