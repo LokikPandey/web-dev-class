@@ -20,6 +20,6 @@ try{
 }
 catch(error)
 {
-    display.value='Error';
+    display.value='Invalid';
 }
 }

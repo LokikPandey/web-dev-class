@@ -18,12 +18,47 @@
             height: 100vh;
             background-color: red;
         }
+        #changes{
+            background-color: red;
+            height: 50px;
+            width: 200px;
+            margin: 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+        button 
+        {
+            color: white;
+            background-color: blue;
+            border-radius: 20px;
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            left: 70px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
     <div class="l">l</div>
-    <div class="r">r</div>
+    <div class="r">r</div> -->
+    <div id="changes">hello world</div>
+    <button id="butt"> click me</button>
 </div>
+<script>
+    const a=document.getElementById('butt');
+    console.log(a);
+
+    a.addEventListener('click',()=>{
+        document.getElementById('changes').style.position='absolute';
+        document.getElementById('changes').style.left='300px';
+        document.getElementById('changes').style.top='500px';
+    })
+</script>
 </body>
 </html>

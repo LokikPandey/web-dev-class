@@ -90,6 +90,11 @@
         }
     }
 }
+.hidemen
+{
+    position: absolute;
+    display: none;
+}
 .right{
     padding-bottom: 100px;
     background-color: rgb(250, 250, 237);
@@ -241,6 +246,16 @@
         .left{
             /* display: none; */
         }
+        .hidemen
+        {
+            display: inline;
+            color: white;
+            cursor: pointer;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
         .right
         {
             width: 100%;
@@ -267,6 +282,7 @@
         .left{
             display: none;
         }
+
         .right
         {
             width: 100%;

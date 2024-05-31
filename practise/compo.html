@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #class{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    #container{
+        padding: 5px;
+        margin: 10px;
+        width: 200px;
+        border-radius: 20px;
+        background-color: rgb(232, 244, 253);
+        /* border: black 1px solid; */
+        transition: box-shadow 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        >h1{
+            color: blue;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: small;
+            color: red;
+        }
+
+        &:hover
+        {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+</style>
+<body>
+    <div id="class">
+    <div id="container">
+        <h1>abcdef</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, facilis.</h3>
+    </div>
+    <div id="container">
+        <h1>abcdef</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, facilis.</h3>
+    </div>
+    <div id="container">
+        <h1>abcdef</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, facilis.</h3>
+    </div>
+    <div id="container">
+        <h1>abcdef</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, facilis.</h3>
+    </div>
+</div>
+</body>
+</html>

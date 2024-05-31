@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode Toggle</title>
+
+    <style>
+        :root {
+    --background-color: white;
+    --text-color: black;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Toggle Dark/Light Mode</h1>
+        <button id="toggleButton">Toggle Dark/Light Mode</button>
+    </div>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+    // Get the current root element's styles
+    const root = document.documentElement;
+
+    // Check the current mode
+    if (root.style.getPropertyValue('--background-color') === 'white') {
+        // Switch to dark mode
+        root.style.setProperty('--background-color', 'black');
+        root.style.setProperty('--text-color', 'white');
+    } else {
+        // Switch to light mode
+        root.style.setProperty('--background-color', 'white');
+        root.style.setProperty('--text-color', 'black');
+    }
+});
+
+    </script>
+</body>
+</html>

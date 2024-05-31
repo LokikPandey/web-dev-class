@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter number" id="num">
+    <button onclick="check()">splited</button>
+    <div id="front"></div>
+    <div id="rear"></div>
+</body>
+<script>
+    function check()
+    {
+        const num=document.getElementById('num').value;
+        if(num.length!=10) console.log('wrong number');
+        const numc=/^[0-9]+$/;
+        if(!numc.test(num)) alert('wrong number');
+        let front=num.substring(1,3);
+        document.getElementById('front').innerHTML+=front;
+        let rear=num.substring(4,9);
+        document.getElementById('rear').innerHTML+=rear;         
+    }
+</script>
+</html>

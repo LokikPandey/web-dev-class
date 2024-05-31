@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    this is a form validation question
+    <form action="" onsubmit="validate()">
+        <input type="text" placeholder="name" id="name">
+        <input type="email" name="" id="email" placeholder="email">
+        <select id="card">
+            <option value="master" selected>Master</option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+        </select>
+        <input type="text" id="cardnumber" placeholder="enter card number">
+        <input type="submit" id="submit">
+    </form>
+</body>
+<script>
+    document.getElementById('name').addEventListener('mouseenter',()=>{
+        document.getElementById('name').placeholder="";
+    })
+    document.getElementById('name').addEventListener('mouseleave',()=>{
+        document.getElementById('name').placeholder="name";
+    })
+    document.getElementById('email').addEventListener('mouseenter',()=>{
+        document.getElementById('email').placeholder="";
+    })
+    document.getElementById('email').addEventListener('mouseleave',()=>{
+        document.getElementById('email').placeholder="email";
+    })   
+     document.getElementById('cardnumber').addEventListener('mouseenter',()=>{
+        document.getElementById('cardnumber').placeholder="";
+    })
+    document.getElementById('cardnumber').addEventListener('mouseleave',()=>{
+        document.getElementById('cardnumber').placeholder="enter card number";
+    })
+    function validate()
+    {
+        const name=document.getElementById('name').value;
+        const email=document.getElementById('email').value;
+        const card=document.getElementById('card').value;
+        const cardnumber=document.getElementById('cardnumber').value;
+
+        if(cardnumber.length<10) alert('wrong cardnumber');
+
+        const namec=/^[A-Z ][a-z ]+$/
+        const emailc=/^[a-z0-9]+@[a-z]+.[a-z]+$/
+        
+        if(!namec.test(name)) alert('wrong name');
+        if(!emailc.test(email)) alert('wrong email');
+        if(card=='master') alert('master')
+        if(card=='visa') alert('visa')
+        if(card=='rupay') alert('rupay')
+    }
+</script>
+</html>

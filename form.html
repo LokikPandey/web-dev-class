@@ -4,62 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main{
+            background-color: rgb(251, 218, 215);
+            padding: 15px;
+            height: fit-content;
+            width: fit-content;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 20px;
+        }
+        .formm{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+        }
+        .tile{
+            display: flex;
+            
+            flex-direction: row;
+            gap: 10px;
+            >label{
+                flex: 1;
+            }
+            >input{
+                border-radius: 10px;
+                border: none;
+                flex: 2;
+            }
+            
+        }
+
+        @media screen and (max-width:500px) {
+            .main{
+                width: fit-content;
+            }
+            .formm{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <head> html form</head>
-    <fieldset>
-        <legend><h1>Enter your information</h1></legend>
-    <form action="" class="portfolio">
-        <div class="grid grid-cols-2 gap-2">
-            <label>Enter name:</label>
-            <input type="text" placeholder="harish rana" required/>
-            <label>e-mail:</label>
-            <input type="email" placeholder="abc@xyz" required/>
-            <label>Enter ph no:</label>
-            <input type="text" placeholder="56537268" required/>
-          </div>
+    <div class="main">
+        <div class="formm">
+            <div class="tile"><label for="">Name</label><input type="text"></div>
+            <div class="tile"><label for="">class</label><input type="text"></div>
+            <div class="tile"><label for="">roll no</label><input type="text"></div>
+            <div class="tile"><label for="">section</label><input type="text"></div>
+            <div class="tile"><label for="">university</label><input type="text"></div>
+            <div class="tile"><label for="">course</label><input type="text"></div>
 
-        <br><br><label>Gender:<br></label>
-        <input type="radio" name="gender"/>Male<br>
-        <input type="radio" name="gender"/>Female<br>
-        <input type="radio" name="gender"/>Mental illness
-       <br><br>
-        <label>Enter your query:</label>
-
-        <textarea rows="3" cols="50"></textarea>
-        <br><br>
-        <input type="submit" id="sub">
-    </form>
-    </fieldset>
+        </div>
+    </div>
 </body>
-<style>
-
-    .grid{
-    display: grid
-    }
-
-    .grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr))
-    }
-
-    .gap-2{
-  gap: 0.5rem
-}
-input{
-    border-radius: 5px;
-    background-color: lightgrey;
-}
-textarea{
-    border-radius: 5px;
-}
-
-#sub{
-    padding: 5px 10px;
-    cursor: pointer;
-
-}
-input[type="submit"]:hover {
-    background-color: grey;
-}
-</style>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country capital</title>
+    <style>
+        .correct{
+            color: green;
+        }
+        .incorrect{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <select id="country">
+        <option value="india">India</option>
+        <option value="usa">usa</option>
+        <option value="uk">UK</option>
+    </select>
+    <select id="capital">
+        <option value="delhi">New delhi</option>
+        <option value="wc">Washington dc</option>
+        <option value="london">London</option>
+    </select>
+    <button onclick="validate()">validate</button>
+</body>
+<script>
+    function validate()
+    {
+        const arr={
+            "india":"delhi",
+            "usa":"wc",
+            "uk":"london"
+        }
+
+        const country=document.getElementById('country').value;
+        const cap=document.getElementById('capital').value;
+        console.log(cap); console.log(country);
+        console.log(arr[country])
+        if(arr[country]!=cap) alert('yes')
+
+
+    }
+</script>
+</html>

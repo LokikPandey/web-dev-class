@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            display: block;
+            margin: 30px;
+            position: absolute;
+            border-radius: 30px;
+        }
+
+        .bikerot {
+            animation: rottra 1s infinite;
+        }
+
+        @keyframes rottra {
+            0% {
+                transform: rotate(0deg) 
+            }
+
+            100% {
+                transform: rotate(360deg) 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <img src="bike.png" alt="" srcset="" id="bike">
+    <button onclick="fun()">click me</button>
+    <script>
+        const fun = () => {
+            var bike = document.getElementById('bike');
+            bike.classList.add('bikerot');
+        }
+    </script>
+</body>
+</html>

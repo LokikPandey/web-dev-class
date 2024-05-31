@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container
+        {
+            padding: 20px 0;
+            margin: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            width: 100%;
+            /* align-items: center; */
+            /* justify-content: center; */
+
+            .contain{
+                margin: 2px 20px;
+                display: flex;
+                >label
+                {
+                    flex: 1;
+                }
+                >input
+                {
+                    flex: 2;
+                    width: 100%;
+                    max-width: 400px;    
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width:800px) {
+        .main{
+        .container{
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: 1fr;
+            .contain{
+                flex-direction: column;
+                
+            }
+        }
+    }
+        
+    }
+</style>
+<body>
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat est sunt eius mollitia assumenda possimus fugit magnam sequi obcaecati. Reprehenderit quam dolores quo impedit, eligendi eveniet minima, excepturi quidem, ad tempore esse provident similique. Rem, vero corporis. Eos aspernatur iste illum obcaecati eius exercitationem similique iure quo enim cumque est rem qui facere eaque voluptatem dolore, pariatur harum voluptatibus unde at temporibus quidem nesciunt officia. Suscipit autem fugit quis tempora doloribus inventore sapiente dicta quisquam. Dolorem sed neque ipsum fugit odio alias aliquam ipsam reprehenderit, tenetur deserunt repellat harum delectus. Itaque repellendus dicta modi magnam aliquam blanditiis a quaerat architecto ipsa alias impedit, pariatur reprehenderit quisquam libero recusandae neque ratione illum nemo nam ab velit corporis incidunt voluptatum voluptates! Necessitatibus nesciunt voluptatibus laudantium itaque, magnam, minus tenetur natus dolores, earum atque quam. Ex necessitatibus culpa aperiam dolor. Earum doloremque doloribus accusantium minima deserunt repellendus quasi. Sapiente perferendis accusantium minus, maiores vitae ullam sint consequuntur sit similique commodi pariatur porro earum quod rerum odit voluptates facere molestias deserunt quas omnis. Suscipit culpa quia at saepe cumque corrupti molestias, inventore omnis magnam temporibus accusamus, facere aperiam tenetur ab, alias fuga! Sint velit, consequuntur aliquam facere vel voluptatum accusantium quas reprehenderit dolores excepturi accusamus officia aut repellendus facilis quidem expedita in voluptate. Dolor dicta repellat voluptatum a, illo accusantium. Culpa architecto vel quod perferendis quam sint aliquam modi repellendus quos possimus. Aliquid enim nobis nihil, incidunt labore tempore dolorem. Blanditiis, corrupti quod. Rem explicabo libero delectus veritatis placeat aperiam laborum pariatur modi voluptatibus?
+        <div class="container">
+            <div class="contain">
+                <label for="name">name:</label>
+                <input type="text">
+            </div>
+            <div class="contain">
+                <label for="name">father's name:</label>
+                <input type="text">
+            </div>
+            <div class="contain">
+                <label for="name">mother's name:</label>
+                <input type="text">
+            </div>
+            <div class="contain">
+                <label for="name">phone number:</label>
+                <input type="text">
+            </div>
+            <div class="contain">
+                <label for="name">address:</label>
+                <input type="text">
+            </div>
+            <div class="contain">
+                <label for="name">institute:</label>
+                <input type="text">
+            </div>
+            <div class="contain">
+                <label for="name">email:</label>
+                <input type="text">
+            </div>            <div class="contain">
+                <label for="name">name:</label>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

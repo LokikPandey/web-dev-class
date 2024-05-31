@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', (event)=>{
+        const sidebar = document.getElementById('sidebar');
+        const toggleButtonOut = document.getElementById('toggleButtonOut');
+        const toggleButtonIn = document.getElementById('toggleButtonIn');
+
+
+        const populateSideBar = () => {
+            if (sidebar.style.display === 'none'){
+                sidebar.style.display = 'block';
+                toggleButtonOut.style.display = 'none';
+            } else {
+                sidebar.style.display = 'none';
+                toggleButtonOut.style.display = 'block'; 
+            }
+        };
+
+        toggleButtonIn.addEventListener('click',()=>{
+            console.log("Clicked Outside");
+            populateSideBar();
+        })
+
+        toggleButtonOut.addEventListener('click',()=>{
+            console.log("Clicked Inside");
+            populateSideBar();
+        })
+
+
+    })
+</script>
+<body>
+    <button
+        id="toggleButtonOut"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div id="sidebar" style="text-align: center; width:20vw; height: 100vh; display:none;background: cyan;">
+        <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+            <p>Header</p>
+            <button
+                id="toggleButtonIn"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        Hello World !!!
+    </div>
+</body>
+</html>

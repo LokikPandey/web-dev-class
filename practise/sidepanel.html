@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;
+    }
+    button{
+        position: absolute;
+        left:20px;top: 20px;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .box{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        >#panel{
+            background: blue;
+            width: 40vw;
+            height: 100vh;
+            display: none;
+            position: absolute;
+            border-radius: 0 20px;;
+            background-color: rgb(204, 201, 198);
+            >ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: xx-large;
+                text-decoration: none;
+                list-style: none;
+                flex-direction: column;
+                >a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: black;
+                }
+            }
+            
+        }
+        >#right{
+            background-color: rgb(248, 247, 218);
+            width: inherit;
+        }
+    }
+</style>
+<body>
+    <button id="butt" onclick="fun()">show</button>
+    <div class="box">
+    <div id="panel">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">home</a></li>
+        </ul>
+    </div>
+    <div id="right">main part of the website</div>
+</div>
+</body>
+<script>
+    function fun(){
+
+        let panel=document.getElementById("panel");
+        console.log(panel);
+        if(panel.style.display==="none" || panel.style.display==="") panel.style.display="inline-block";
+        else panel.style.display="none"
+}
+</script>
+</html>
